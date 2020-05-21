@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+   <div align="center">
+   <h1>Update Result</h1>
+   <form method="post">
+       {% csrf_token %}
+       <table>
+           <tr>
+               <td>Physics</td>
+               <td><input type="text" value="{{ record_result.physics }}"></td>
+           </tr>
+           <tr>
+               <td>Chemistry</td>
+               <td><input type="text" value="{{ record_result.chemistry }}"></td>
+           </tr>
+           <tr>
+               <td>Maths</td>
+               <td><input type="text" value="{{ record_result.maths }}"></td>
+           </tr>
+           <tr>
+               <td>Social Studies</td>
+               <td><input type="text" value="{{ record_result.social_studies }}"></td>
+           </tr>
+           <tr>
+               <td>English</td>
+               <td><input type="text" value="{{ record_result.english }}"></td>
+           </tr>
+           <tr>
+               <td>Hindi</td>
+               <td><input type="text" value="{{ record_result.hindi }}"></td>
+           </tr>
+       </table>
+       <br>
+       <input type="submit" class="btn btn-primary" value="Update">
+   </form>
+   </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+        <br>
+<div style="height: 50px ;width: 75%;background: darkred; border-radius: 50px; color: white; margin-left:12.5%">
+    <h2 style="font-family: 'Baskerville Old Face';margin-left: 20px;font-size: 40px">Welcome {{ profile_character }}</h2>
+</div>
+<br>
+<div class="container" style="margin-top: 30px">
+    <div class="jumbotron" style="background: darkred; color: white;border-radius: 50px">
+    <div class="col-md-8 col-sm-10 col-12">
+        <h2 style="font-family: 'Times New Roman'; font-size: 40px">Signup</h2><hr style="background: white"><br>
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Signup</button>
+      </form>
+    </div>
+  </div>
+    <div class="jumbotron" style="background: darkred;border-radius: 30px; color: white; padding-top: 17px; padding-bottom: 15px"><h4>Already have an account :  <a type="submit" href="/student_home/" class="btn btn-primary">Login</a></h4> </div>
+</div>
+{% endblock %}

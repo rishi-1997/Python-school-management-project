@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+    <div class="jumbotron" style="background: white">
+        <div align="center">
+        <form method="post" style="margin-bottom: 30px">
+        {% csrf_token %}
+            <h1 style="font-family: 'Times New Roman'">Student Attendance</h1>
+            <table border="2" style="width: 1000px">
+                <thead>
+                <th>Username</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Attendance Status</th>
+                <th>Reason</th>
+                </thead>
+                {% for x in Student_list %}
+                    <tr>
+                        <td>{{ x.Username}}</td>
+                        <td>{{ x.first_name }}</td>
+                        <td>{{ x.middle_name }}</td>
+                        <td>{{ x.last_name }}</td>
+                        <td>{{ form.Attendance_status }}</td>
+                        <td>{{ form.Reason }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+    <br>
+ <input type="submit" class="btn btn-primary" value="Save">
+    </form>
+        </div>
+    </div>
+{% endblock %}
+</html>

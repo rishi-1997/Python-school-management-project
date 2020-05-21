@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'selected/student_pages/student_base.html' %}
+{% block student_block %}
+    <div class="jumbotron" style="width: 1200px; color: white; background: darkred">
+        <h1 style="font-family: 'Times New Roman'; font-size: 40px">Results</h1><hr color="white"><br>
+    <table border="1" style="width: 600px; height: 300px;border-width: 5px;border-color: white; font-family: 'Times New Roman'; font-size: 25px">
+            <tr>
+                <td width="250px">Physics : </td>
+                <td>{{ student_result.physics}} / 100</td>
+            </tr>
+            <tr>
+                <td>Chemistry : </td>
+                <td>{{ student_result.chemistry }} / 100</td>
+            </tr>
+            <tr>
+                <td>Maths : </td>
+                <td>{{student_result.maths }} / 100</td>
+            </tr>
+            <tr>
+                <td>Social Studies : </td>
+                <td>{{ student_result.social_studies }} / 100</td>
+            </tr>
+            <tr>
+                <td>English : </td>
+                <td>{{ student_result.english }} / 100</td>
+            </tr>
+            <tr>
+                <td>Hindi : </td>
+                <td>{{student_result.hindi}} / 100</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

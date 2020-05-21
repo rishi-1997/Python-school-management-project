@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SMP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div style="background: url(/static/images/school_image.jpg);width: 100% ; height: 500px">
+            <img style="border-radius: 50%; margin: 30px 100px 50px 30px; display: inline" src="{% static 'images/logo.png' %}" height="200px" width="200px" alt="school_logo" usemap="#workmap">
+            <map name="workmap">
+                <area shape="circle" coords="100 100 100 100" alt="#college_info" href="/">
+            </map>
+            <h1 align="center" style="font-size: 80px; display: inline;color: maroon; font-size: 100px ;font-family: 'Times New Roman'"> ST. JHON HIGH SCHOOL </h1>
+            <h5 align="center" style="color: white; font-family: Algerian">
+                Vision : In the Forefront of Nation Building <br><br>
+                Mission : To Create Responsssible IndependentIndividuals Who have the Knowledge <br>
+                and Attitude to be Successful in an Everchanging World.<br><br>
+                Slogan : Temple Of Learning<br><br>
+                Motto : Inspiring Excellence
+            </h5>
+</div>
+<br>
+<div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light; bg-danger">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <!--div-->
+            <a class="navbar-brand" href="/" style="color: white">HOME </a> &nbsp&nbsp&nbsp&nbsp
+            <a class="navbar-brand" href="/our_institutions/" style="color: white">OUR INSTITUTION </a>&nbsp&nbsp&nbsp&nbsp
+            <a class="navbar-brand" href="/our_pillars/" style="color: white">THE PILLARS </a>&nbsp&nbsp&nbsp&nbsp
+            <a class="navbar-brand" href="/advisory_panel/" style="color: white">ADVISORY PANEL </a>&nbsp&nbsp&nbsp&nbsp
+            <a class="navbar-brand" href="/about_us/" style="color: white">ABOUT US </a>&nbsp&nbsp&nbsp&nbsp
+            <!--/div-->
+            <!--div-->
+            <img style="border-radius: 50%;margin-left: 35%; display: inline" src="{% static 'images/profile_logo.png' %}" height="50px" width="50px" alt="Workplace" usemap="#profilemac">
+            <map name="profilemac">
+                <area shape="circle" coords="50,100,100,50" alt="#select_profile" href="/select_profile/">
+            </map>&nbsp&nbsp&nbsp&nbsp
+            <!-/div-->
+        </nav>
+</div>
+{%  block school_block %}
+{% endblock  %}
+<br>
+<div class="container">
+<div  align="center" style="height: 200px; width: 100%">
+    <div class="col-xs-12">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+        <div class="row">
+            <div class="col-xs-4">
+                 <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school1.jpg" alt="...">
+            </div>
+            <div class="col-xs-4">
+                 <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school2.jpg" alt="...">
+             </div>
+            <div class="col-xs-4">
+                <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school3.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+      <div class="item">
+          <div class="row">
+              <div class="col-xs-4">
+                  <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school4.jpg" alt="...">
+              </div>
+              <div class="col-xs-4">
+                  <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school5.jpg" alt="...">
+              </div>
+              <div class="col-xs-4">
+                  <img style="width: 100%; height: 200px" class="img-responsive center-block" src="/static/images/school6.jpg" alt="...">
+              </div>
+      </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+<br>
+<div style="background: darkred;height: 230px ; color: white" >
+<table border="0">
+<tr>
+    <td>
+    <table border="0" style="margin-left: 200px" >
+        <br><br>
+        <h5 style="margin-left: 200px" colspan="4"> QUICK LINKS</h5>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td  style="font-size: 13px"><a href="/" style="color:white">Home</a></td>
+            <td width="10px"></td>
+            <td style="font-size: 13px">Site Map</td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px" >Contact</td>
+            <td width="10px"></td>
+            <td style="font-size: 13px">Article</td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px">Location Map</td>
+            <td width="10px"></td>
+            <td><a style="font-size: 13px; color: white" href="/about_us/">About Us</a></td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px"><a href="/our_pillars/" style="color: white">The pillars</a> </td>
+            <td width="10px"></td>
+            <td style="font-size: 13px"><a href="/advisory_panel/" style="color: white">Advisory Panel</a></td>
+        </tr>
+    </table><br>
+    </td>
+    <td>
+    <table border="0" style="margin-left: 200px" >
+        <h5 style="margin-left: 200px" colspan="4">CONNECT WITH US </h5>
+
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-primary" value="facebook"></td>
+            <td width="10px"></td>
+            <td><input type="submit" class="btn btn-danger" value="Youtube"></td>
+        </tr>
+    </table><br>
+    </td>
+    <td>
+    <table border="0" style="margin-left: 180px" >
+        <br><br><br>
+        <h5 style="margin-left: 200px" colspan="4"> CONTACT US</h5>
+
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td  style="font-size: 13px">Address:</td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px" >Pioneer Residency Park,</td>
+
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px">Somalwada, Nagpur – 440025.</td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px">Phone: 0712-2294791. </td>
+        </tr>
+        <tr>
+            <td width="20px"></td>
+            <td style="font-size: 13px">E-mail Address: nes@nesnv.com </td>
+        </tr>
+
+    </table>
+    </td>
+</tr>
+</table>
+</div>
+</body>
+</html>

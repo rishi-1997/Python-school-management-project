@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div style="background: darkred">
+    <img style="border-radius: 50%; margin: 30px 100px 50px 30px; display: inline" src="{% static 'images/logo.png' %}" height="200px" width="200px" alt="Workplace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="circle" coords="100 100 100 100" alt="#college_info" href="/">
+    </map>
+    <h1 style="display: inline;color: white; font-size: 70px ;margin-left: 8%;font-family: 'Times New Roman'"> ST. JHON HIGH SCHOOL </h1>
+</div>
+{%  block profile_block %}
+{% endblock  %}
+</body>
+</html>

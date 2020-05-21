@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'selected/student_pages/student_base.html' %}
+{% block student_block %}
+    <div class="jumbotron" style="width: 1200px; color: white; background: darkred">
+        <h1 style="font-family: 'Times New Roman'; font-size: 40px">Profile Details</h1><hr color="white"><br>
+    <table border="0" style="width: 100%; height: 600px; font-family: 'Times New Roman'; font-size: 25px">
+            <tr>
+                <td width="250px">First Name : </td>
+                <td>{{ student_detail.first_name}}</td>
+            </tr>
+            <tr>
+                <td>Middle Name : </td>
+                <td>{{ student_detail.middle_name }}</td>
+            </tr>
+            <tr>
+                <td>Last Name : </td>
+                <td>{{ student_detail.last_name }}</td>
+            </tr>
+            <tr>
+                <td>Username : </td>
+                <td>{{ student_detail.Username }}</td>
+            </tr>
+            <tr>
+                <td>Joining Date : </td>
+                <td>{{ student_detail.Joining_date }}</td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td>{{ student_detail.email }}</td>
+            </tr>
+            <tr>
+                <td>Phone : </td>
+                <td>{{ student_detail.phone }}</td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td>{{ student_detail.address }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

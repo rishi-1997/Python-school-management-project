@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+    <div class="jumbotron" style="background: white">
+        <div align="center">
+            <h1 style="font-family: 'Times New Roman'">Students Results</h1>
+            <table border="2" style="width: 800px">
+                <thead>
+                <th>Username</th>
+                <th>Physics</th>
+                <th>Chemistry</th>
+                <th>Maths</th>
+                <th>Social Studies</th>
+                <th>English</th>
+                <th>Hindi</th>
+                </thead>
+                {% for x in result_list %}
+                    <tr>
+                        <td>{{ x.Username }}</td>
+                        <td>{{ x.physics }}</td>
+                        <td>{{ x.chemistry }}</td>
+                        <td>{{ x.maths }}</td>
+                        <td>{{ x.social_studies }}</td>
+                        <td>{{ x.english }}</td>
+                        <td>{{ x.hindi }}</td>
+                        <td>
+                            <a href="/update_result_record/{{ x.Username }}">Update</a> | <a href="/delete_result_record/{{ x.Username }}">Delete</a> </td>
+                    </tr>
+                {% endfor %}
+            </table>
+    <br>
+    <a type="submit" href='/add_student_results/' class="btn btn-primary">Add Result</a>
+    </div>
+    </table>
+    </div>
+{% endblock %}

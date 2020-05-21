@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+        <br>
+    <div class="container; inline-block" style="height: 50px;background: darkred; border-radius: 50px; color: white; margin-left:2%; margin-right: 2%">
+        <h2 class="float-left" style="font-family: 'Baskerville Old Face';margin-left: 20px;font-size: 40px">Add Teacher Details</h2>
+    </div>
+    <div>
+<div class="jumbotron inline-block" style="background: white">
+<div class="jumbotron; float-left" style="width: 500px; margin-left: 150px; margin-top:200px">
+
+    <h2 style="font-family: 'Calibri Light'; font-style: italic">"A good teacher can inspire hope, ignite the imagination, and instill a love of learning." <br> - Brad Henry.</h2>
+    <a type="button" class="btn btn-primary" href="/teacher_list/" style="width: 200px ; margin-top: 100px">View teacher list</a>
+
+</div>
+<div class="jumbotron; float-right" style="width: 500px;margin-bottom: 50px;border-radius: 35px;background: darkred; color: white" align="center">
+ <h1 style="font-family: 'Times New Roman'; margin-top: 50px; margin-bottom: 10px">Registration</h1><br>
+    <form method="post" style="margin-bottom: 30px">
+        {{ form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Register">
+    </form>
+</div>
+</div>
+    </div>
+{%  endblock %}

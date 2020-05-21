@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+   <div align="center">
+   <h1>Update Teacher Details</h1>
+   <form method="post">
+       {% csrf_token %}
+       <table>
+           <tr>
+               <td>Username</td>
+               <td><input type="text" value="{{ record_teacher.Username }}"></td>
+           </tr>
+           <tr>
+               <td>First Name</td>
+               <td><input type="text" value="{{ record_teacher.first_name }}"></td>
+           </tr>
+           <tr>
+               <td>Middle Name</td>
+               <td><input type="text" value="{{ record_teacher.middle_name }}"></td>
+           </tr>
+           <tr>
+               <td>Last Name</td>
+               <td><input type="text" value="{{ record_teacher.last_name }}"></td>
+           </tr>
+           <tr>
+               <td>Joining Date</td>
+               <td><input type="text" value="{{ record_teacher.Joining_date }}"></td>
+           </tr>
+           <tr>
+               <td>Email</td>
+               <td><input type="text" value="{{ record_teacher.email }}"></td>
+           </tr>
+           <tr>
+               <td>Phone</td>
+               <td><input type="text" value="{{ record_teacher.phone }}"></td>
+           </tr>
+           <tr>
+               <td>Address</td>
+               <td><input type="text" value="{{ record_teacher.address }}"></td>
+           </tr>
+       </table>
+       <br>
+       <input type="submit" class="btn btn-primary" value="Update">
+   </form>
+   </div>
+
+{% endblock %}

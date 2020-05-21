@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'profile_app/main.html' %}
+{% block profile_block %}
+        <br>
+    <div class="container; inline-block" style="height: 50px;background: darkred; border-radius: 50px; color: white; margin-left:2%; margin-right: 2%">
+        <h2 class="float-left" style="font-family: 'Baskerville Old Face';margin-left: 20px;font-size: 40px">Welcome {{ profile_character }}</h2>
+        <a class="btn btn-primary; float-right" style="color: darkred; background: white; margin-top: 5px ; margin-right: 15px" href="/accounts/logout/">Logout</a>
+    </div>
+    <br>
+    <div style="margin-left: 2%; margin-right: 2%">
+        <div class="float-left">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nav flex-column nav-pills" style="font-family: 'Times New Roman'" role="tablist" aria-orientation="vertical">
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="/principal_home/">Home</a>
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="/principal_profile/">Profile</a>
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="#v-pills-messages">Messages</a>
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="/add_teacher/">Add Teachers Details</a>
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="/add_student/">Add Students Details</a>
+                            <a class="btn btn-primary" style="border-radius: 20px;font-size: 20px;margin-bottom: 5px;border-color: darkred; background: white; color: darkred; width: 250px" href="/add_student_results/">Results</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="inline-block float-right">
+            {%  block principal_block %}
+            {% endblock  %}
+        </div>
+    </div>
+{% endblock %}
